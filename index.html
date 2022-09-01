@@ -17,13 +17,19 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="spy-link"
+    data-bs-root-margin="0px 0px -40%"
+    class="scrollspy-example bg-light p-0 rounded-0"
+    tabindex="0"
+  >
     <nav
       id="spy-link"
-      class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark lead"
+      class="navbar fixed-top navbar-expand-lg navbar-dark bg-my-color lead"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Rodrigo JBarrera</a>
+        <a class="navbar-brand text-muted" href="#">Rodrigo JBarrera</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -35,8 +41,9 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse nav-pills" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="#inicio">Inicio</a>
             <a class="nav-link" href="#aboutme">Sobre mi</a>
             <a class="nav-link" href="#trabajos">Trabajos</a>
             <a class="nav-link" href="#contacto">Contacto</a>
@@ -46,7 +53,7 @@
     </nav>
     <!-- Header!!! -->
     <header>
-      <div class="my-bg text-white">
+      <div id="inicio" class="my-bg-banner text-white">
         <div class="container pb-5">
           <div class="row d-flex justify-content-center text-center vh-100">
             <div class="col-md-8 h1 d-flex justify-content-center my-auto">
@@ -108,13 +115,7 @@
         </div>
       </div>
     </header>
-    <main
-      data-bs-spy="scroll"
-      data-bs-target="spy-link"
-      data-bs-root-margin="0px 0px -40%"
-      class="scrollspy-example bg-light p-3 rounded-0"
-      tabindex="0"
-    >
+    <main>
       <div
         id="aboutme"
         class="container d-flex flex-column justify-content-center text-center vh-100 mt-3 mb-3"
@@ -140,11 +141,48 @@
       >
         <p>Trabajos</p>
       </div>
-      <div
-        id="contacto"
-        class="container d-flex flex-column justify-content-center text-center vh-100 mt-3 mb-3"
-      >
-        <p>Contacto</p>
+      <div class="bg-my-color">
+        <div
+          id="contacto"
+          class="container d-flex flex-column justify-content-center p-5"
+        >
+          <div class="row text-start lead text-light">
+            <div class="col">
+              <div class="row"><p>Telefono: +549 351 3200517</p></div>
+              <div class="row"><p>Correo: rbarrera028@gmail.com</p></div>
+              <div class="row">
+                <p>
+                  Redes Socialias: <i class="bi bi-whatsapp"></i>
+                  <i class="bi bi-facebook"></i> <i class="bi bi-github"></i>
+                  <i class="bi bi-linkedin"></i>
+                </p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Example textarea</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer class="bg-dark text-light text-center p-1">
